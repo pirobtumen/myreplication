@@ -221,7 +221,7 @@ func (c *connection) fieldList(db, table string) (*resultSet, error) {
 	return rs, nil
 }
 
-func (c *connection) StartBinlogDump(position uint32, fileName string, serverId uint32) (el *eventLog, err error) {
+func (c *connection) StartBinlogDump(position uint32, fileName string, serverId uint32) (el *EventLog, err error) {
 	ok, err := c.ChecksumCompatibility()
 	if err != nil {
 		return
